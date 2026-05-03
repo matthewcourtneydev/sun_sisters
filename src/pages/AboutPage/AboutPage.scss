@@ -1,0 +1,16 @@
+.about-page {
+    background: var(--color-cream);
+    min-height: 100vh;
+
+    > *:not(:first-child) {
+        margin-top: -10px;
+      }
+    
+      .about-hero {
+        padding-bottom: 36px;
+      } 
+    
+      .about-story {
+        padding-bottom: 40px;
+      }
+  }

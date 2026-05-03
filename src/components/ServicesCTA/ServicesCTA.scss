@@ -1,0 +1,86 @@
+.services-cta {
+    background: var(--color-cream);
+  
+    &__inner {
+      display: grid;
+      gap: 28px;
+      align-items: center;
+    }
+  
+    /* IMAGE */
+    &__image {
+      height: 240px;
+      border-radius: 16px;
+  
+      /* 🔥 REPLACED GRADIENT WITH IMAGE */
+      background-image: url('@/assets/images/services_section_image.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+  
+      /* optional subtle polish */
+      box-shadow: var(--shadow-card);
+    }
+  
+    /* CONTENT */
+    &__content {
+      display: grid;
+      gap: 10px;
+      max-width: 420px;
+    }
+  
+    h2 {
+      margin: 0;
+      font-family: var(--font-heading);
+      font-size: 28px;
+      line-height: 1.2;
+      color: var(--color-cocoa);
+    }
+  
+    p {
+      margin: 0;
+      color: var(--color-muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+  
+    &__button {
+      margin-top: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+      background: var(--color-cocoa);
+      color: var(--color-white);
+      padding: 12px 22px;
+      border-radius: 8px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition: transform var(--transition), background var(--transition);
+  
+      &:hover {
+        transform: translateY(-2px);
+        background: var(--color-bronze-dark);
+      }
+    }
+  
+    /* TABLET / DESKTOP */
+    @media (min-width: 768px) {
+      &__inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 42px;
+      }
+  
+      &__image {
+        height: 280px;
+      }
+    }
+  
+    @media (min-width: 1100px) {
+      &__image {
+        height: 320px;
+      }
+    }
+  }

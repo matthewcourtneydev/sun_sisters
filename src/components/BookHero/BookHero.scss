@@ -1,0 +1,127 @@
+.book-hero {
+    padding: 80px 0 50px;
+    text-align: center;
+  
+    &__inner {
+      max-width: 640px;
+      margin: 0 auto 50px;
+    }
+  
+    h1 {
+      font-family: var(--font-heading);
+      font-size: 42px;
+      color: var(--color-cocoa);
+      margin-bottom: 12px;
+    }
+  
+    &__star {
+      display: block;
+      width: 8px;
+      height: 8px;
+      margin: 12px auto;
+      background: var(--color-bronze);
+      transform: rotate(45deg);
+    }
+  
+    p {
+      color: var(--color-muted);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+  
+    &__steps {
+      display: grid;
+      gap: 32px;
+    }
+  }
+  
+  /* STEP */
+  
+  .step {
+    text-align: center;
+  
+    /* 🔥 PERFECT ALIGNMENT FIX */
+    &__top {
+      display: grid;
+      grid-template-columns: 1fr 40px 1fr;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+  
+    /* ICON */
+    &__icon {
+      grid-column: 2;
+  
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(168, 92, 59, 0.08); // soft bronze
+      display: grid;
+      place-items: center;
+      color: var(--color-bronze-dark);
+  
+      transition: transform 0.25s ease;
+  
+      &:hover {
+        transform: translateY(-2px) scale(1.05);
+      }
+  
+      svg {
+        width: 20px;
+        height: 20px;
+        stroke: currentColor;
+        fill: none;
+        stroke-width: 1.5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    }
+  
+    /* LINE */
+    &__line {
+      height: 1px;
+      width: 100%;
+      background: var(--color-border);
+  
+      &.is-hidden {
+        visibility: hidden; // keeps spacing!
+      }
+    }
+  
+    /* NUMBER */
+    &__number {
+      width: 30px;
+      height: 30px;
+      margin: 0 auto 12px;
+      border-radius: 50%;
+      background: var(--color-cocoa);
+      color: var(--color-white);
+      display: grid;
+      place-items: center;
+      font-size: 12px;
+      font-weight: 700;
+    }
+  
+    h3 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 6px;
+      color: var(--color-cocoa);
+    }
+  
+    p {
+      font-size: 13px;
+      color: var(--color-muted);
+    }
+  }
+  
+  /* DESKTOP */
+  
+  @media (min-width: 768px) {
+    .book-hero__steps {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 36px;
+    }
+  }

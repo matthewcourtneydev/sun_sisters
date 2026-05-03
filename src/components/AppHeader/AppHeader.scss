@@ -1,0 +1,194 @@
+.site-header {
+    background: rgba(247, 243, 238, 0.96);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(229, 221, 213, 0.85);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  
+    &__inner {
+        min-height: 72px;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 28px;
+    }
+  
+    &__logo {
+        display: flex;
+        align-items: center;
+      
+        img {
+          width: 130px;
+          height: auto;
+          display: block;
+          object-fit: contain;
+        }
+    }
+  
+    &__logo-mark {
+      font-size: 18px;
+      color: var(--color-bronze-dark);
+      line-height: 1;
+      margin-bottom: -2px;
+    }
+  
+    &__logo-text {
+      font-family: var(--font-heading);
+      font-size: 25px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+  
+    &__nav {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      gap: 46px;
+      color: var(--color-cocoa);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+  
+      a {
+        position: relative;
+        opacity: 0.78;
+        transition: opacity var(--transition);
+  
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: -9px;
+          height: 1px;
+          background: var(--color-bronze-dark);
+          transform: scaleX(0);
+          transition: transform var(--transition);
+        }
+  
+        &:hover,
+        &.router-link-active {
+          opacity: 1;
+  
+          &::after {
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+  
+    &__cta {
+      display: none;
+      background: var(--color-cocoa);
+      color: var(--color-white);
+      padding: 13px 22px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      box-shadow: 0 8px 20px rgba(62, 42, 31, 0.14);
+      transition: transform var(--transition), background var(--transition);
+  
+      &:hover {
+        transform: translateY(-2px);
+        background: var(--color-bronze-dark);
+      }
+    }
+  
+    &__menu-button {
+      justify-self: end;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--color-border);
+      border-radius: 50%;
+      background: var(--color-white);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+      padding: 0;
+  
+      span {
+        width: 16px;
+        height: 2px;
+        background: var(--color-cocoa);
+        border-radius: 2px;
+        transition: transform 0.25s ease, opacity 0.2s ease;
+      }
+  
+      &.is-open {
+        span:nth-child(1) {
+          transform: translateY(6px) rotate(45deg);
+        }
+  
+        span:nth-child(2) {
+          opacity: 0;
+        }
+  
+        span:nth-child(3) {
+          transform: translateY(-6px) rotate(-45deg);
+        }
+      }
+    }
+  
+    &__mobile-panel {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      background: rgba(247, 243, 238, 0.98);
+      backdrop-filter: blur(14px);
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      box-shadow: 0 18px 40px rgba(62, 42, 31, 0.08);
+    }
+  
+    &__mobile-nav {
+      display: grid;
+      gap: 18px;
+      padding: 26px 20px 30px;
+      text-align: center;
+      color: var(--color-muted);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+  
+      a.router-link-active {
+        color: var(--color-cocoa);
+      }
+    }
+  
+    &__mobile-cta {
+      width: fit-content;
+      margin: 8px auto 0;
+      background: var(--color-cocoa);
+      color: var(--color-white) !important;
+      padding: 13px 22px;
+      border-radius: 8px;
+    }
+  
+    @media (min-width: 768px) {
+      &__nav,
+      &__cta {
+        display: flex;
+      }
+  
+      &__menu-button,
+      &__mobile-panel {
+        display: none;
+      }
+
+      &__logo img {
+        width: 130px;
+      }
+    }
+  }

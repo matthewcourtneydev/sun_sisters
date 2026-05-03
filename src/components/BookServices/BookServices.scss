@@ -1,0 +1,93 @@
+.book-services {
+    padding: 60px 0;
+  }
+  
+  /* HEADER */
+  
+  .book-services__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 40px;
+  
+    h2 {
+      font-family: var(--font-heading);
+      font-size: 24px;
+      color: var(--color-cocoa);
+    }
+  
+    .divider {
+      width: 60px;
+      height: 1px;
+      background: var(--color-border);
+    }
+  }
+  
+  /* GRID */
+  
+  .book-services__grid {
+    display: grid;
+    gap: 24px;
+  }
+  
+  /* CARD */
+  
+  .service-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    transition: all 0.25s ease;
+    cursor: pointer;
+  
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-card);
+    }
+  
+    &__image {
+      height: 160px;
+      background: linear-gradient(
+        135deg,
+        var(--color-sand),
+        var(--color-taupe)
+      );
+    }
+  
+    &__body {
+      padding: 16px;
+    }
+  
+    h3 {
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      color: var(--color-cocoa);
+    }
+  
+    p {
+      font-size: 13px;
+      color: var(--color-muted);
+      margin-bottom: 10px;
+    }
+  
+    &__price {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--color-bronze-dark);
+    }
+  }
+  
+  /* RESPONSIVE */
+  
+  @media (min-width: 768px) {
+    .book-services__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .book-services__grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }

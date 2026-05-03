@@ -1,0 +1,99 @@
+.hero {
+  background: var(--color-cream);
+  height: 52vh; /* 👈 THIS is the big fix (controls total hero height) */
+  max-height: 640px; /* prevents it from getting too tall on big screens */
+  min-height: 420px; /* keeps it usable on smaller screens */
+
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 42px;
+    align-items: end;
+    width: 100%;
+  }
+
+  &__content {
+    max-width: 620px;
+    padding-bottom: 32px;
+  }
+
+  &__sparkle {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: var(--color-bronze-dark);
+    font-size: 18px;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1.08;
+    color: var(--color-cocoa);
+  }
+
+  &__text {
+    max-width: 520px;
+    margin: 20px 0 24px;
+    color: var(--color-muted);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  &__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-cocoa);
+    color: var(--color-white);
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* === ARCH === */
+  &__media {
+    position: relative;
+    height: 80%; /* 👈 fills the hero height */
+
+    background: var(--color-sand);
+    border-radius: 48% 48% 0 0 / 38% 38% 0 0;
+    max-width: 450px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  /* === IMAGE === */
+  &__image {
+    width: auto;
+    height: auto;
+  
+    max-height: 100%;   /* 👈 THIS is the fix */
+    max-width: 100%;
+    object-fit: contain;
+    object-position: bottom center;
+  }
+
+  /* === MOBILE === */
+  @media (max-width: 767px) {
+    height: auto;
+    padding: 48px 0;
+
+    &__inner {
+      grid-template-columns: 1fr;
+    }
+
+    &__media {
+      display: none;
+    }
+  }
+}

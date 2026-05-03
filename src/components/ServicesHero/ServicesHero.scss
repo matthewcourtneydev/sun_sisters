@@ -1,0 +1,19 @@
+.services-hero {
+    text-align: center;
+  
+    &__inner {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+  
+    h1 {
+      margin-bottom: 10px;
+    }
+  
+  
+    p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--color-muted);
+    }
+  }

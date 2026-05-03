@@ -1,0 +1,25 @@
+:root {
+    --color-cream: #f7f3ee;
+    --color-sand: #e8ded2;
+    --color-taupe: #d6c7b8;
+    --color-bronze: #c89b6d;
+    --color-bronze-dark: #8a5c3b;
+    --color-cocoa: #3e2a1f;
+    --color-muted: #7a6f66;
+    --color-border: #e5ddd5;
+    --color-white: #ffffff;
+  
+    --font-heading: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    --font-body: 'Inter', Arial, sans-serif;
+  
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 18px;
+    --radius-xl: 28px;
+  
+    --shadow-soft: 0 18px 50px rgba(62, 42, 31, 0.08);
+    --shadow-card: 0 12px 34px rgba(62, 42, 31, 0.06);
+  
+    --container-width: 1080px;
+    --transition: 0.36s cubic-bezier(0.22, 1, 0.36, 1);
+  }

@@ -1,0 +1,51 @@
+.about-mission {
+  background: linear-gradient(
+    180deg,
+    var(--color-cream) 0%,
+    var(--color-sand) 18%,
+    var(--color-sand) 82%,
+    var(--color-cream) 100%
+  );
+  padding-top: 20px;
+  &__card {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 42px 26px;
+    border-radius: var(--radius-lg);
+    background: rgba(247, 243, 238, 0.72);
+    text-align: center;
+    box-shadow: var(--shadow-card);
+  }
+
+  &__eyebrow {
+    margin: 0 0 12px;
+    color: var(--color-bronze-dark);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    margin: 0 auto 16px;
+    max-width: 680px;
+    font-family: var(--font-heading);
+    font-size: clamp(28px, 3vw, 40px);
+    line-height: 1.15;
+    color: var(--color-cocoa);
+  }
+
+  p {
+    margin: 0 auto;
+    max-width: 580px;
+    color: var(--color-muted);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  @media (min-width: 768px) {
+    &__card {
+      padding: 54px 42px;
+    }
+  }
+}

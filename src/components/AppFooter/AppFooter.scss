@@ -1,0 +1,110 @@
+.site-footer {
+    background: var(--color-cream);
+    color: var(--color-cocoa);
+    padding: 48px 0 0;
+    margin-top: 0;
+  
+    /* ===== TOP ===== */
+    &__top {
+      display: grid;
+      gap: 36px;
+    }
+  
+    @media (min-width: 768px) {
+      &__top {
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        align-items: start;
+      }
+    }
+  
+    /* BRAND */
+    &__brand {
+      max-width: 260px;
+    }
+  
+    &__logo {
+      width: 140px;
+      height: auto;
+      display: block;
+      margin-bottom: 14px;
+      object-fit: contain;
+    }
+  
+    /* TEXT */
+    p {
+      margin: 0 0 6px;
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--color-muted);
+    }
+  
+    /* HEADINGS */
+    h3 {
+      margin-bottom: 10px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-cocoa);
+    }
+  
+    /* LINKS */
+    a {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 13px;
+      color: var(--color-muted);
+      text-decoration: none;
+      transition: color var(--transition);
+  
+      &:hover {
+        color: var(--color-cocoa);
+      }
+    }
+  
+    /* SOCIALS */
+    &__socials {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 14px;
+    }
+  
+    &__social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      color: var(--color-cocoa);
+      opacity: 0.75;
+      transition: opacity var(--transition), transform var(--transition);
+  
+      &:hover {
+        opacity: 1;
+        transform: translateY(-2px);
+      }
+    }
+  
+    &__social-icon {
+      width: 18px;
+      height: 18px;
+      display: block;
+      fill: currentColor;
+    }
+  
+    /* ===== BOTTOM BAR ===== */
+    &__bottom {
+      background: var(--color-cocoa);
+      margin-top: 40px;
+      padding: 14px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+  
+      p {
+        margin: 0;
+        text-align: center;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.75);
+      }
+    }
+  }
