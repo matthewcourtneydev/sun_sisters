@@ -11,11 +11,9 @@
   
     &__image {
       min-height: 210px;
-      background: linear-gradient(
-        135deg,
-        var(--color-sand),
-        var(--color-taupe)
-      );
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
   
     &__content {
@@ -79,4 +77,10 @@
         min-height: 250px;
       }
     }
+  }
+
+  .book-help-cta__image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }

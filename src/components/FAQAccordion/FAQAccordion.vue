@@ -1,8 +1,15 @@
 <template>
   <section class="faq-accordion">
     <div class="container faq-accordion__inner">
-      <div class="faq-accordion__image" data-reveal></div>
 
+      <!-- IMAGE -->
+      <div
+        class="faq-accordion__image"
+        data-reveal
+        :style="{ backgroundImage: `url(${faqImage})` }"
+      ></div>
+
+      <!-- FAQ LIST -->
       <div class="faq-accordion__list" data-reveal data-reveal-delay="1">
         <article
           v-for="(item, index) in faqs"
@@ -27,6 +34,7 @@
           </transition>
         </article>
       </div>
+
     </div>
   </section>
 </template>
@@ -34,6 +42,9 @@
 <script setup>
 import { ref } from 'vue'
 import './FAQAccordion.scss'
+
+// 🔥 import your image
+import faqImage from '@/assets/images/FAQ_image.png'
 
 const openIndex = ref(1)
 

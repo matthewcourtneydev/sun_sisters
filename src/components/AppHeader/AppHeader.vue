@@ -11,6 +11,7 @@
         <RouterLink to="/services">Services</RouterLink>
         <RouterLink to="/gallery">Gallery</RouterLink>
         <RouterLink to="/faq">FAQ</RouterLink>
+        <RouterLink to="/contact">Contact</RouterLink>
       </nav>
 
       <RouterLink to="/book" class="site-header__cta"> Book Now </RouterLink>
@@ -43,6 +44,7 @@
           <RouterLink to="/services" @click="closeMenu">Services</RouterLink>
           <RouterLink to="/gallery" @click="closeMenu">Gallery</RouterLink>
           <RouterLink to="/faq" @click="closeMenu">FAQ</RouterLink>
+          <RouterLink to="/contact">Contact</RouterLink>
           <RouterLink
             to="/book"
             class="site-header__mobile-cta"
