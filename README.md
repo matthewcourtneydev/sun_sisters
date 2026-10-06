@@ -1,257 +1,184 @@
-# ☀️ Sun Sisters
+# Sun Sisters Spray Tanning
 
-A modern, responsive website for **Sun Sisters**, a Charlotte-based spray tanning brand focused on delivering a warm, personalized glow experience.
+Official website for **Sun Sisters Spray Tanning**, a mobile spray tanning business serving the Charlotte, North Carolina area.
 
-Sun Sisters was built as a front-end web project with an emphasis on clean UI, responsive design, reusable components, accessibility, and a simple booking experience.
-
----
-
-## ✨ Overview
-
-The goal of the Sun Sisters website was to create a digital experience that feels as polished and approachable as the brand itself.
-
-The site combines a playful, sun-inspired visual identity with a clean and modern interface. Visitors can explore the brand, view tanning services, learn more about the process, browse frequently asked questions, and move through a streamlined booking experience.
-
-The project was also built with maintainability in mind, using reusable Vue components and organized SCSS rather than placing styling directly inside components.
+**Live Site:** [sunsistersspraytanning.com](https://sunsistersspraytanning.com)
 
 ---
 
-## 🛠 Tech Stack
+## About the Project
 
-- **Vue.js**
-- **Vite**
-- **JavaScript**
-- **SCSS**
-- **HTML5**
-- **CSS3**
-- **Git / GitHub**
-- **Vercel**
+The Sun Sisters Spray Tanning website provides clients with information about the business, available tanning services, the spray tanning process, preparation and aftercare, frequently asked questions, and booking.
+
+The site was designed and developed as a custom Vue application with a responsive interface and a visual identity built specifically for the Sun Sisters brand.
 
 ---
 
-## 🌞 Features
+## Tech Stack
 
-- Fully responsive desktop and mobile layouts
-- Custom Sun Sisters branding and visual identity
-- Reusable Vue components
-- Component-specific SCSS styling
-- Responsive navigation
-- Service and pricing presentation
-- About / brand story content
-- Image gallery
-- FAQ accordion
-- Booking experience
-- Contact form
-- Calls-to-action throughout the site
-- Accessible interactive elements
-- Optimized page structure for SEO
-- Reusable hero and content sections
+- [Vue.js](https://vuejs.org/)
+- [Vite](https://vite.dev/)
+- JavaScript
+- SCSS
+- HTML
+- GitHub
+- Vercel
 
 ---
 
-## 📄 Pages
+## Features
 
-The website includes:
+### Responsive Design
 
-- **Home**
-- **About**
-- **Services**
-- **Gallery**
-- **FAQ**
-- **Book**
-- **Contact**
+The site is fully responsive and designed for desktop, tablet, and mobile devices.
 
-Each page maintains a consistent visual system while serving a distinct part of the customer journey.
+Layouts, navigation, imagery, and content sections adapt across screen sizes while maintaining a consistent visual experience.
 
----
+### Custom Brand Design
 
-## 📅 Booking Flow
+The website was built around the Sun Sisters visual identity, using custom typography, colors, imagery, and graphic elements throughout the site.
 
-The booking interface walks customers through a simple multi-step process:
+Reusable design patterns maintain consistency across pages while allowing individual sections to have their own layouts and content.
 
-1. **Choose Your Service**
-2. **Pick Your Date & Time**
-3. **Provide Your Information**
-4. **Confirm & Glow**
+### Services
 
-Service options include individual spray tans, bridal tanning, group tanning, add-ons, and contact options.
+The site presents the available spray tanning services with descriptions and pricing information to help clients determine the appropriate option before booking.
 
----
+### Booking
 
-## 🎨 Design
+Booking calls-to-action are integrated throughout the site to provide clients with a clear path from learning about a service to scheduling an appointment.
 
-Sun Sisters uses a warm, playful visual system inspired by sunshine, summer, and natural skin tones.
+### Spray Tan Information
 
-The design emphasizes:
+Educational content helps clients understand what to expect before, during, and after their appointment.
 
-- Warm neutral backgrounds
-- Sun-inspired accent colors
-- Rounded shapes and typography
-- Bold calls-to-action
-- Generous spacing
-- Large photography
-- Clean information hierarchy
-- Mobile-first responsive behavior
+Preparation and aftercare information is provided to help clients achieve and maintain the best possible results.
 
-The brand identity intentionally uses chunky, rounded forms rather than thin linework to maintain a cohesive and approachable personality.
+### Frequently Asked Questions
+
+The FAQ section provides answers to common questions about spray tanning, appointments, preparation, aftercare, and the overall tanning process.
 
 ---
 
-## 📁 Project Structure
+## Pages
+
+The site currently includes:
+
+- Home
+- About
+- Services
+- Gallery
+- FAQ
+- Booking
+- Contact
+
+---
+
+## Project Structure
+
+Key project directories include:
 
 ```text
-sun-sisters/
-├── public/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── views/
-│   ├── App.vue
-│   └── main.js
-├── index.html
-├── package.json
-├── vite.config.js
-└── README.md
+src/
+├── assets/
+├── components/
+├── views/
+├── App.vue
+└── main.js
 ```
 
-Reusable UI elements are separated into components, with styling kept organized alongside the corresponding components.
+### `assets`
+
+Contains site assets including images, graphics, and other visual resources used throughout the application.
+
+### `components`
+
+Contains reusable Vue components used across the site.
+
+These components help maintain consistent navigation, layout, content presentation, and interactive behavior.
+
+### `views`
+
+Contains the primary page-level views for the application.
+
+### `App.vue`
+
+Provides the root application structure and shared application-level layout.
+
+### `main.js`
+
+Initializes the Vue application and application-level dependencies.
 
 ---
 
-## 🚀 Getting Started
+## Local Development
 
-### Clone the repository
-
-```bash
-git clone <repository-url>
-```
-
-### Navigate into the project
-
-```bash
-cd sun-sisters
-```
-
-### Install dependencies
+Install dependencies:
 
 ```bash
 npm install
 ```
 
-### Start the development server
+Start the development server:
 
 ```bash
 npm run dev
 ```
 
-Vite will start a local development server and provide the local URL in the terminal.
+Vite will provide the local development URL after the server starts.
 
 ---
 
-## 📦 Production Build
+## Production Build
 
-Create an optimized production build with:
+Create a production build with:
 
 ```bash
 npm run build
 ```
 
-The production files will be generated inside:
-
-```text
-dist/
-```
-
-To preview the production build locally:
+Preview the production build locally with:
 
 ```bash
 npm run preview
 ```
 
+Production is available at:
+
+**https://sunsistersspraytanning.com**
+
 ---
 
-## 🌐 Deployment
+## Content Updates
 
-The project is configured for deployment through **Vercel**.
+Most routine site content can be updated directly within the corresponding Vue views and components.
 
-The deployment workflow is:
+Reusable components are used throughout the project to keep shared design elements and functionality consistent across pages.
+
+Site imagery and other visual assets are stored within the project's asset directories.
+
+---
+
+## Deployment
+
+The website is deployed using **Vercel**.
+
+The custom domain is:
 
 ```text
-Local Development
-        ↓
-      GitHub
-        ↓
-      Vercel
-        ↓
- Production Site
+sunsistersspraytanning.com
 ```
 
-Updates pushed to the connected GitHub repository can automatically trigger a new Vercel deployment.
+DNS is managed separately through the domain provider.
+
+HTTPS is enabled for the production site.
 
 ---
 
-## ♿ Accessibility
-
-Accessibility was considered throughout the interface, including:
-
-- Semantic HTML structure
-- Keyboard-accessible controls
-- Visible interactive states
-- Appropriate button and link usage
-- Responsive text and layouts
-- Clear content hierarchy
-- Accessible navigation patterns
-
----
-
-## 💡 What I Practiced
-
-Sun Sisters provided an opportunity to work with:
-
-- Vue component architecture
-- Reusable front-end components
-- SCSS organization
-- Responsive web design
-- Brand-driven UI development
-- Mobile-first layouts
-- Form and booking UI
-- Accessibility
-- Git-based development workflows
-- Vite production builds
-- Vercel deployment
-
----
-
-## 📸 Screenshots
-
-Project screenshots can be added here to showcase the final interface.
-
-### Home
-
-<!-- Add homepage screenshot -->
-
-### Services
-
-<!-- Add services screenshot -->
-
-### Booking
-
-<!-- Add booking screenshot -->
-
-### Mobile
-
-<!-- Add mobile screenshot -->
-
----
-
-## 👨‍💻 Developer
+## Developer
 
 Designed and developed by **Matthew Courtney**.
 
-This project was created as part of my front-end development portfolio and demonstrates my approach to building responsive, accessible, and brand-focused web experiences.
-
 ---
 
-## 📄 License
-
-This project and the Sun Sisters brand assets were created for portfolio and demonstration purposes.
+© Sun Sisters Spray Tanning
